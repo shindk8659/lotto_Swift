@@ -10,6 +10,17 @@
 		529053B52234E64F00D253A8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053B42234E64F00D253A8 /* main.swift */; };
 		529053C22234E66A00D253A8 /* lotto_Swift_UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053C12234E66A00D253A8 /* lotto_Swift_UnitTest.swift */; };
 		529053C72234E66F00D253A8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053B42234E64F00D253A8 /* main.swift */; };
+		529053C92234EB7900D253A8 /* LottoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053C82234EB7900D253A8 /* LottoController.swift */; };
+		529053CA2234ECBC00D253A8 /* LottoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053C82234EB7900D253A8 /* LottoController.swift */; };
+		529053CC2234F30900D253A8 /* NumGeneratorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053CB2234F30900D253A8 /* NumGeneratorDelegate.swift */; };
+		529053CE2234F4BC00D253A8 /* LottoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053CD2234F4BC00D253A8 /* LottoGenerator.swift */; };
+		529053D02234F5DD00D253A8 /* FixedLottoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053CF2234F5DD00D253A8 /* FixedLottoGenerator.swift */; };
+		529053D22234F66300D253A8 /* WholeNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053D12234F66300D253A8 /* WholeNums.swift */; };
+		529053D42234FA6100D253A8 /* FixedLottoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053CF2234F5DD00D253A8 /* FixedLottoGenerator.swift */; };
+		529053D52234FA6400D253A8 /* NumGeneratorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053CB2234F30900D253A8 /* NumGeneratorDelegate.swift */; };
+		529053D62234FA6700D253A8 /* WholeNums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053D12234F66300D253A8 /* WholeNums.swift */; };
+		529053D72234FB7300D253A8 /* LottoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053CD2234F4BC00D253A8 /* LottoGenerator.swift */; };
+		529053D9223500EA00D253A8 /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053D8223500EA00D253A8 /* Count.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +41,12 @@
 		529053BF2234E66A00D253A8 /* lotto_Swift_UnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lotto_Swift_UnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		529053C12234E66A00D253A8 /* lotto_Swift_UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lotto_Swift_UnitTest.swift; sourceTree = "<group>"; };
 		529053C32234E66A00D253A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		529053C82234EB7900D253A8 /* LottoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoController.swift; sourceTree = "<group>"; };
+		529053CB2234F30900D253A8 /* NumGeneratorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumGeneratorDelegate.swift; sourceTree = "<group>"; };
+		529053CD2234F4BC00D253A8 /* LottoGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoGenerator.swift; sourceTree = "<group>"; };
+		529053CF2234F5DD00D253A8 /* FixedLottoGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedLottoGenerator.swift; sourceTree = "<group>"; };
+		529053D12234F66300D253A8 /* WholeNums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WholeNums.swift; sourceTree = "<group>"; };
+		529053D8223500EA00D253A8 /* Count.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Count.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				529053B42234E64F00D253A8 /* main.swift */,
+				529053D8223500EA00D253A8 /* Count.swift */,
+				529053C82234EB7900D253A8 /* LottoController.swift */,
+				529053D12234F66300D253A8 /* WholeNums.swift */,
+				529053DA2235070300D253A8 /* LottoGenerators */,
 			);
 			path = lotto_Swift;
 			sourceTree = "<group>";
@@ -83,6 +104,16 @@
 				529053C32234E66A00D253A8 /* Info.plist */,
 			);
 			path = lotto_Swift_UnitTest;
+			sourceTree = "<group>";
+		};
+		529053DA2235070300D253A8 /* LottoGenerators */ = {
+			isa = PBXGroup;
+			children = (
+				529053CB2234F30900D253A8 /* NumGeneratorDelegate.swift */,
+				529053CD2234F4BC00D253A8 /* LottoGenerator.swift */,
+				529053CF2234F5DD00D253A8 /* FixedLottoGenerator.swift */,
+			);
+			path = LottoGenerators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +204,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529053CE2234F4BC00D253A8 /* LottoGenerator.swift in Sources */,
+				529053D9223500EA00D253A8 /* Count.swift in Sources */,
+				529053CC2234F30900D253A8 /* NumGeneratorDelegate.swift in Sources */,
+				529053D22234F66300D253A8 /* WholeNums.swift in Sources */,
+				529053D02234F5DD00D253A8 /* FixedLottoGenerator.swift in Sources */,
+				529053C92234EB7900D253A8 /* LottoController.swift in Sources */,
 				529053B52234E64F00D253A8 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,7 +219,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				529053C72234E66F00D253A8 /* main.swift in Sources */,
+				529053D42234FA6100D253A8 /* FixedLottoGenerator.swift in Sources */,
+				529053D62234FA6700D253A8 /* WholeNums.swift in Sources */,
 				529053C22234E66A00D253A8 /* lotto_Swift_UnitTest.swift in Sources */,
+				529053D72234FB7300D253A8 /* LottoGenerator.swift in Sources */,
+				529053D52234FA6400D253A8 /* NumGeneratorDelegate.swift in Sources */,
+				529053CA2234ECBC00D253A8 /* LottoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

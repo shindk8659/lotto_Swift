@@ -8,5 +8,11 @@
 
 import Foundation
 
-print("Hello, World!")
+let lottoC = LottoController()
+let count = Count()
+print("구입금액을 입력해 주세요.")
+let input: String = readLine() ?? ""
+let lottoCount = count.countingInPrice(inputString: input)
+lottoC.playLottoWithCount(count: lottoCount)
+
 
