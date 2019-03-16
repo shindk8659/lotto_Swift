@@ -8,12 +8,11 @@
 
 import Foundation
 
-class Count {
+class Counter {
     
     public func countingInPrice(inputString: String) -> Int {
         let wholePrice = Int(inputString)
-        let count:Int = wholePrice!/1000
-        print("\(count)개를 구매했습니다.")
-        return count
+        return wholePrice!/1000
     }
+
 }

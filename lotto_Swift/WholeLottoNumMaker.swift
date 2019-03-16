@@ -8,9 +8,9 @@
 
 import Foundation
 
-class WholeNums {
+class WholeLottoNumMaker {
     
-    public func makeWholeNums() -> [Int]  {
+    public func makeWholeLottoNums() -> [Int]  {
         var num = [Int]()
         for i in 1...45 {
             num.append(i)

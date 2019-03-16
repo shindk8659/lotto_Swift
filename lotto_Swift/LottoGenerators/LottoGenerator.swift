@@ -10,7 +10,7 @@ import Foundation
 
 class LottoGenerator: NumGeneratorDelegate {
 
-    public func generateLottoNum(wholenNums:[Int]) -> [Int] {
+    public func generateLottoNums(wholenNums:[Int]) -> [Int] {
         var wholeNums = wholenNums
         var lottoNums = [Int]()
         for _ in 0..<6 {

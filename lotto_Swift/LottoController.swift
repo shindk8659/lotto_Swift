@@ -10,28 +10,45 @@ import Foundation
 
 public class LottoController {
     
-    let lottoGenerator = LottoGenerator()
-    let wholeNums = WholeNums()
+    public var input:String = ""
+    private var lottoCount = 0
+    private var purchasedLottos = [[Int]]()
     
-    
-    public func playLottoWithCount(count: Int) {
-        let wholeNumArray = wholeNums.makeWholeNums()
-        var generateLottoArray = [[Int]]()
-        for _ in 0..<count {
-            let generateLottoNum = lottoGenerator.generateLottoNum(wholenNums:wholeNumArray )
-            generateLottoArray.append(generateLottoNum)
-        }
-        lottoResultPrint(generateLottoArray: generateLottoArray)
+    public func printLottoCount() {
+        let counter = Counter()
+        lottoCount = counter.countingInPrice(inputString: input)
+        print("\(lottoCount)개를 구매했습니다.")
     }
     
-    public func lottoResultPrint(generateLottoArray:[[Int]]) {
-        for i in 0..<generateLottoArray.count{
-           print(generateLottoArray[i])
+    public func buyLottos() {
+        
+        let lottoGenerator = LottoGenerator()
+        let wholeLottoNumMaker = WholeLottoNumMaker()
+        let wholeLottoNums = wholeLottoNumMaker.makeWholeLottoNums()
+       
+        for _ in 0..<lottoCount {
+            let generateLottoNum = lottoGenerator.generateLottoNums(wholenNums: wholeLottoNums)
+            purchasedLottos.append(generateLottoNum)
         }
     }
     
+    public func printPurchasedLottos() {
+        for i in 0..<purchasedLottos.count {
+           print(purchasedLottos[i])
+        }
+    }
     
-    
-    
-    
+    public func checkWinLotto(winLotto:String) {
+        let winChecker = WinChecker()
+        winChecker.getWinLotto(winLotto: winLotto)
+        
+        for i in 0..<purchasedLottos.count {
+            winChecker.purchasedLotto = purchasedLottos[i]
+            winChecker.checkCollectedUpperTree()
+        }
+        winChecker.printCompareResult()
+        winChecker.printRevenuePercent()
+        
+    }
+   
 }

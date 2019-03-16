@@ -10,7 +10,7 @@ import Foundation
 
 class FixedLottoGenerator: NumGeneratorDelegate {
    
-    public func generateLottoNum(wholenNums: [Int]) -> [Int] {
+    public func generateLottoNums(wholenNums: [Int]) -> [Int] {
         var fiexdLottoNums = [Int]()
         for i in 1...6 {
            fiexdLottoNums.append(i)
