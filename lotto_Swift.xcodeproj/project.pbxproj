@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22586E9122428897007090DE /* LottoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22586E9022428897007090DE /* LottoGenerator.swift */; };
+		22586E9422428AEF007090DE /* LottoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ECDE94223CCCD1003D96B3 /* LottoController.swift */; };
+		22586E9522429681007090DE /* LottoStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ECDE98223CD99F003D96B3 /* LottoStatistics.swift */; };
+		22ECDE8E223CCB04003D96B3 /* NumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ECDE8D223CCB04003D96B3 /* NumberGenerator.swift */; };
+		22ECDE90223CCC1C003D96B3 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ECDE8F223CCC1C003D96B3 /* InputView.swift */; };
+		22ECDE93223CCC7E003D96B3 /* OutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ECDE92223CCC7E003D96B3 /* OutputView.swift */; };
+		22ECDE95223CCCD1003D96B3 /* LottoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ECDE94223CCCD1003D96B3 /* LottoController.swift */; };
+		22ECDE97223CCF7E003D96B3 /* Lotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ECDE96223CCF7E003D96B3 /* Lotto.swift */; };
+		22ECDE99223CD99F003D96B3 /* LottoStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ECDE98223CD99F003D96B3 /* LottoStatistics.swift */; };
 		529053B52234E64F00D253A8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053B42234E64F00D253A8 /* main.swift */; };
 		529053C22234E66A00D253A8 /* lotto_Swift_UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053C12234E66A00D253A8 /* lotto_Swift_UnitTest.swift */; };
 		529053C72234E66F00D253A8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529053B42234E64F00D253A8 /* main.swift */; };
@@ -25,6 +34,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		22586E9022428897007090DE /* LottoGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoGenerator.swift; sourceTree = "<group>"; };
+		22ECDE8D223CCB04003D96B3 /* NumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberGenerator.swift; sourceTree = "<group>"; };
+		22ECDE8F223CCC1C003D96B3 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		22ECDE92223CCC7E003D96B3 /* OutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputView.swift; sourceTree = "<group>"; };
+		22ECDE94223CCCD1003D96B3 /* LottoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoController.swift; sourceTree = "<group>"; };
+		22ECDE96223CCF7E003D96B3 /* Lotto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lotto.swift; sourceTree = "<group>"; };
+		22ECDE98223CD99F003D96B3 /* LottoStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoStatistics.swift; sourceTree = "<group>"; };
 		529053B12234E64F00D253A8 /* lotto_Swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lotto_Swift; sourceTree = BUILT_PRODUCTS_DIR; };
 		529053B42234E64F00D253A8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		529053BF2234E66A00D253A8 /* lotto_Swift_UnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lotto_Swift_UnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +66,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22586E9222428A52007090DE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				22ECDE96223CCF7E003D96B3 /* Lotto.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		22586E9322428A59007090DE /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				22586E9022428897007090DE /* LottoGenerator.swift */,
+				22ECDE8D223CCB04003D96B3 /* NumberGenerator.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		22ECDE91223CCC6E003D96B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22ECDE8F223CCC1C003D96B3 /* InputView.swift */,
+				22ECDE92223CCC7E003D96B3 /* OutputView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		529053A82234E64F00D253A8 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +114,11 @@
 			isa = PBXGroup;
 			children = (
 				529053B42234E64F00D253A8 /* main.swift */,
+				22ECDE94223CCCD1003D96B3 /* LottoController.swift */,
+				22ECDE98223CD99F003D96B3 /* LottoStatistics.swift */,
+				22586E9322428A59007090DE /* Util */,
+				22586E9222428A52007090DE /* Domain */,
+				22ECDE91223CCC6E003D96B3 /* View */,
 			);
 			path = lotto_Swift;
 			sourceTree = "<group>";
@@ -173,7 +220,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22586E9122428897007090DE /* LottoGenerator.swift in Sources */,
+				22ECDE97223CCF7E003D96B3 /* Lotto.swift in Sources */,
+				22ECDE99223CD99F003D96B3 /* LottoStatistics.swift in Sources */,
+				22ECDE95223CCCD1003D96B3 /* LottoController.swift in Sources */,
+				22ECDE90223CCC1C003D96B3 /* InputView.swift in Sources */,
+				22ECDE8E223CCB04003D96B3 /* NumberGenerator.swift in Sources */,
 				529053B52234E64F00D253A8 /* main.swift in Sources */,
+				22ECDE93223CCC7E003D96B3 /* OutputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				529053C72234E66F00D253A8 /* main.swift in Sources */,
+				22586E9522429681007090DE /* LottoStatistics.swift in Sources */,
 				529053C22234E66A00D253A8 /* lotto_Swift_UnitTest.swift in Sources */,
+				22586E9422428AEF007090DE /* LottoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KB65UR5HX8;
+				DEVELOPMENT_TEAM = S3H456VQ6Y;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -318,7 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KB65UR5HX8;
+				DEVELOPMENT_TEAM = S3H456VQ6Y;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -329,7 +385,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = KB65UR5HX8;
+				DEVELOPMENT_TEAM = S3H456VQ6Y;
 				INFOPLIST_FILE = lotto_Swift_UnitTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -347,7 +403,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = KB65UR5HX8;
+				DEVELOPMENT_TEAM = S3H456VQ6Y;
 				INFOPLIST_FILE = lotto_Swift_UnitTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -8,5 +8,13 @@
 
 import Foundation
 
-print("Hello, World!")
+let input = inputView()
+let money = input.inputPurchase()
+
+let controller = LottoController()
+controller.start(money: money)
+
+
+
+
 
