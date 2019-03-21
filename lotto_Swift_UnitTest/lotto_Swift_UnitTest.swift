@@ -18,16 +18,26 @@ class lotto_Swift_UnitTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test로또구매개수확인() {
+        let expectedValue: Int = 2
+        
+        let testValue: Int = 2000
+        let purchaseLotto = PurchaseLotto(money: testValue).getLotto()
+        
+        XCTAssertEqual(expectedValue, purchaseLotto, "구매 개수가 일치하지 않습니다.")
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    //FIXME: 수정 중
+    func test로또일치개수확인() {
+        let expectedValue: Int = 6
+        
+        let testWinValue: [Int] = [1, 1, 1, 1, 1, 1]
+        let lotto = Lotto()
+        
+        let result = LottoStatistics(win: testWinValue, purchase: [lotto])
+        let resultValue: Int = result.checkArray(purchaseArray: lotto.getLotto())
+        
+        XCTAssertEqual(expectedValue, resultValue, "로또 일치 개수가 일치하지 않습니다.")
     }
 
 }

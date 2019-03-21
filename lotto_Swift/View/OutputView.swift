@@ -15,15 +15,14 @@ public class OutputView {
     }
     
     //구매한 로또 갯수를 출력해주는 함수
-    public func outputPurchaseCount(money: Int, purchaseNumber: Int) {
-        let controller = LottoController()
-        let purchaseNum = controller.getLotto(money: money)
+    public func outputPurchaseCount(money: Int) {
+        let purchase = PurchaseLotto(money: money)
+        let purchaseNum = purchase.getLotto()
         print("\(purchaseNum)개를 구매하였습니다.")
     }
     
     //구매한 로또 번호를 모두 출력해주는 함수
     public func outputTotalLotto(purchaseArray: [Lotto]) {
-
         for i in 0..<purchaseArray.count {
             print(purchaseArray[i].getLotto())
         }

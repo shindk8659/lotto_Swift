@@ -20,6 +20,7 @@ public class LottoGenerator {
     }
     
     //한 개(1000원)의 로또를 생성해주는 함수
+    //TODO: 여기 인자에 랜덤, 픽스 제너레이터를 받을까
     public func getLotto() -> [Int]  {
         for _ in 0..<LOTTO_SIZE {
             lottoArray.append(numberGenerator.getRandomNumber())

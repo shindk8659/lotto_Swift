@@ -41,13 +41,13 @@ public class LottoStatistics {
     }
     
     //당첨 번호 배열과 구매 번호 배열을 비교하는 함수
-    public func checkArray(purchaseArray: [Int]){
+    public func checkArray(purchaseArray: [Int]) -> Int {
         var check: Int = 0
         for i in 0..<winLotto.count {
             check += checkArrayElemnet(purchaseArray: purchaseArray, winLottoNumber: winLotto[i])
         }
-        print(check)
         getCheckCount(check: check)
+        return check
     }
     
     //당첨 번호 배열 원소와 구매 번호 배열 원소의 일치 여부를 카운트 하는 함수
