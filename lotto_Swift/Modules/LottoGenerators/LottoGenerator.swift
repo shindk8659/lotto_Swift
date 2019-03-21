@@ -9,18 +9,19 @@
 import Foundation
 
 class LottoGenerator: NumGeneratorDelegate {
-
-    public func generateLottoNums(wholenNums:[Int]) -> [Int] {
-        var wholeNums = wholenNums
+    
+    public func generateLottoNums(lotto:Lotto) -> Lotto {
+        var numbers = lotto.makeNumber()
         var lottoNums = [Int]()
         for _ in 0..<6 {
-            let num = wholeNums.shuffled()[0]
-            let index = wholeNums.index(of:num)
-            wholeNums.remove(at: index!)
+            let num = numbers.shuffled()[0]
+            let index = numbers.index(of:num)
+            numbers.remove(at: index!)
             lottoNums.append(num)
         }
         lottoNums.sort()
-        return lottoNums
+        lotto.setLottoNum(lottoNum: lottoNums)
+        return lotto
     }
     
     

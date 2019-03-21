@@ -9,6 +9,7 @@
 import Foundation
 
 protocol NumGeneratorDelegate {
-    func generateLottoNums(wholenNums:[Int]) -> [Int]
+    
+    func generateLottoNums(lotto:Lotto) -> Lotto
 
 }

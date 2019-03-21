@@ -10,12 +10,13 @@ import Foundation
 
 class FixedLottoGenerator: NumGeneratorDelegate {
    
-    public func generateLottoNums(wholenNums: [Int]) -> [Int] {
+    public func generateLottoNums(lotto:Lotto) -> Lotto {
         var fiexdLottoNums = [Int]()
         for i in 1...6 {
            fiexdLottoNums.append(i)
         }
-        return fiexdLottoNums
+        lotto.setLottoNum(lottoNum: fiexdLottoNums)
+        return lotto
     }
     
 }

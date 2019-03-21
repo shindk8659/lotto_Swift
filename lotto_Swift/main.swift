@@ -9,15 +9,14 @@
 import Foundation
 
 let lottoController = LottoController()
+let inputData = InputData()
 print("구입금액을 입력해 주세요.")
-let input: String = readLine() ?? ""
-lottoController.input = input
-lottoController.printLottoCount()
-lottoController.buyLottos()
-lottoController.printPurchasedLottos()
+let input = inputData.setPurchasedMoney()
+lottoController.buyLottos(inputString: input)
 print("지난 주 당첨 번호를 입력해 주세요.")
-let winLotto: String = readLine() ?? ""
+let winLotto = inputData.setLastWinLotto()
 lottoController.checkWinLotto(winLotto: winLotto)
+
 
 
 
