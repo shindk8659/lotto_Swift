@@ -10,17 +10,11 @@ import Foundation
 
 class WinChecker {
     
-    private var winLottoNum = [Int]()
+    public var winLottoNum = [Int]()
     private var treeCount = 0
     private var fourCount = 0
     private var fiveCount = 0
     private var sixCount = 0
-    
-    public func getWinLotto(winLotto:String) -> [Int] {
-        let withoutSeperator = winLotto.replacingOccurrences(of: ",", with: "").replacingOccurrences(of: " ", with: " ")
-        winLottoNum =  withoutSeperator.components(separatedBy: " ").map { (value:String) -> Int in return Int(value) ?? 0}
-        return winLottoNum
-    }
     
     public func getCollectLottoCountArray(purchasedLottos:[Lotto]) -> [Int] {
         var collectLottoCounts = [Int]()

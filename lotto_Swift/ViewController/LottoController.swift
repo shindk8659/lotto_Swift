@@ -9,11 +9,10 @@
 import Foundation
 
 public class LottoController {
-    
-    private let resultPrinter = ResultPrinter()
+
     private var purchasedLottos = [Lotto]()
     
-    public func buyLottos(inputString: String) {
+    func buyLottos(inputString: String) -> [Lotto] {
        
         let lottoGenerator = LottoGenerator()
         let counter = Counter()
@@ -25,16 +24,15 @@ public class LottoController {
             let generateLottoNum = lottoGenerator.generateLottoNums(lotto: lotto)
             purchasedLottos.append(generateLottoNum)
         }
-        resultPrinter.printPurchasedLottos(purchasedLottos: purchasedLottos)
+        return purchasedLottos
+       
     }
     
-    
-    public func checkWinLotto(winLotto:String) {
+    public func checkWinLotto(winLotto:String) -> [Int]{
         let winChecker = WinChecker()
-        _ = winChecker.getWinLotto(winLotto: winLotto)
-        let collectLottoCounts = winChecker.getCollectLottoCountArray(purchasedLottos: purchasedLottos)
-        resultPrinter.printCompareNumResult(counts: collectLottoCounts)
-        resultPrinter.printRevenuePercent(counts: collectLottoCounts)
+        let withoutSeperatorWinLotto = winLotto.replacingOccurrences(of: ",", with: "").replacingOccurrences(of: " ", with: " ")
+        winChecker.winLottoNum =  withoutSeperatorWinLotto.components(separatedBy: " ").map { (value:String) -> Int in return Int(value) ?? 0}
+        return winChecker.getCollectLottoCountArray(purchasedLottos: purchasedLottos)
  
     }
    
