@@ -28,11 +28,11 @@ public class LottoController {
        
     }
     
-    public func checkWinLotto(winLotto:String) -> [Int]{
+    public func checkWinLottoTime(winLotto:String) -> [Int]{
         let winChecker = WinChecker()
         let withoutSeperatorWinLotto = winLotto.replacingOccurrences(of: ",", with: "").replacingOccurrences(of: " ", with: " ")
         winChecker.winLottoNum =  withoutSeperatorWinLotto.components(separatedBy: " ").map { (value:String) -> Int in return Int(value) ?? 0}
-        return winChecker.getCollectLottoCountArray(purchasedLottos: purchasedLottos)
+        return winChecker.getCollectLottoCounts(purchasedLottos: purchasedLottos)
  
     }
    

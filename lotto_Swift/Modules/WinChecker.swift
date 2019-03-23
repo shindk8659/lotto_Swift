@@ -16,7 +16,7 @@ class WinChecker {
     private var fiveCount = 0
     private var sixCount = 0
     
-    public func getCollectLottoCountArray(purchasedLottos:[Lotto]) -> [Int] {
+    public func getCollectLottoCounts(purchasedLottos:[Lotto]) -> [Int] {
         var collectLottoCounts = [Int]()
     
         for i in 0..<purchasedLottos.count {

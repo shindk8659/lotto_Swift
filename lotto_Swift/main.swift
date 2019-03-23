@@ -21,7 +21,7 @@ resultPrinter.printPurchasedLottos(purchasedLottos: purchasedLottos)
 print("지난 주 당첨 번호를 입력해 주세요.")
 
 let winLotto = inputData.setLastWinLotto()
-let collectLottoCounts = lottoController.checkWinLotto(winLotto: winLotto)
+let collectLottoCounts = lottoController.checkWinLottoTime(winLotto: winLotto)
 resultPrinter.printCompareNumResult(counts: collectLottoCounts)
 resultPrinter.printRevenuePercent(counts: collectLottoCounts)
 
